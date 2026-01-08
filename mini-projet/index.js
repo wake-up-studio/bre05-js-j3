@@ -62,49 +62,81 @@ function grid4()
 
 function grid5()
 {
-    let firstRow = document.querySelectorAll(".grid:nth-child(5) div:nth-child(-n+3)")
-    let secondRow = document.querySelectorAll(".grid:nth-child(5) div:nth-child(n+4):nth-child(-n+6)")
-    let thirdRow = document.querySelectorAll(".grid:nth-child(5) div:nth-child(n+7):nth-child(-n+9)")
+    // let firstRow = document.querySelectorAll(".grid:nth-child(5) div:nth-child(-n+3)")
+    // let secondRow = document.querySelectorAll(".grid:nth-child(5) div:nth-child(n+4):nth-child(-n+6)")
+    // let thirdRow = document.querySelectorAll(".grid:nth-child(5) div:nth-child(n+7):nth-child(-n+9)")
     
-    for(let div of firstRow){
-        div.style.backgroundColor = blue
+    // for(let div of firstRow){
+    //     div.style.backgroundColor = blue
+    // }
+    
+    // for(let i = 0; i<secondRow.length; i++){
+    //     if(i % 2 === 0){
+    //         secondRow[i].style.backgroundColor = red
+    //     }
+    //     else{
+    //         secondRow[i].style.backgroundColor = purple
+    //     }
+    // }
+    
+    // for(let x = 0; x<secondRow.length; x++){
+    //     if(x % 2 === 0){
+    //         thirdRow[x].style.backgroundColor = orange
+    //     }
+    //     else{
+    //         thirdRow[x].style.backgroundColor = yellow
+    //     }
+    // }
+    
+    let grid5 = document.querySelectorAll(".grid:nth-child(5) div")
+    
+    for (let i = 0; i<grid5.length; i++)
+    if(i<3){
+        grid5[i].style.backgroundColor = blue
     }
-    
-    for(let i = 0; i<secondRow.length; i++){
-        if(i % 2 === 0){
-            secondRow[i].style.backgroundColor = red
-        }
-        else{
-            secondRow[i].style.backgroundColor = purple
-        }
+    else if(i<6 && i%2===0){
+        grid5[i].style.backgroundColor = red
     }
-    
-    for(let x = 0; x<secondRow.length; x++){
-        if(x % 2 === 0){
-            thirdRow[x].style.backgroundColor = orange
-        }
-        else{
-            thirdRow[x].style.backgroundColor = yellow
-        }
+    else if(i<6 && i%2!==0){
+        grid5[i].style.backgroundColor = purple
+    }
+    else if(i<grid5.length && i%2===0){
+        grid5[i].style.backgroundColor = orange
+    }
+    else{
+        grid5[i].style.backgroundColor = yellow
     }
 }
 
 function grid6()
 {
-    let firstRow = document.querySelectorAll(".grid:last-of-type div:nth-child(-n+3)")
-    let secondRow = document.querySelectorAll(".grid:last-of-type div:nth-child(n+4):nth-child(-n+6)")
-    let thirdRow = document.querySelectorAll(".grid:last-of-type div:nth-child(n+7):nth-child(-n+9)")
+    // let firstRow = document.querySelectorAll(".grid:last-of-type div:nth-child(-n+3)")
+    // let secondRow = document.querySelectorAll(".grid:last-of-type div:nth-child(n+4):nth-child(-n+6)")
+    // let thirdRow = document.querySelectorAll(".grid:last-of-type div:nth-child(n+7):nth-child(-n+9)")
     
-    for(let div of firstRow){
-        div.style.background = "linear-gradient(#956caf, #427cf5)"
+    // for(let div of firstRow){
+    //     div.style.background = "linear-gradient(#956caf, #427cf5)"
+    // }
+    
+    // for(let div of secondRow){
+    //     div.style.background = "linear-gradient(#4cee7e, #efec4f)"
+    // }
+    
+    // for(let div of thirdRow){
+    //     div.style.background = "linear-gradient(#eca45c, #e85b69)"
+    // }
+    
+    let grid6 = document.querySelectorAll(".grid:last-of-type div")
+    
+    for(let i=0;i<grid6.length;i++)
+    if(i<3){
+        grid6[i].style.background = "linear-gradient(#956caf, #427cf5)"
     }
-    
-    for(let div of secondRow){
-        div.style.background = "linear-gradient(#4cee7e, #efec4f)"
+    else if(i<6){
+        grid6[i].style.background = "linear-gradient(#4cee7e, #efec4f)"
     }
-    
-    for(let div of thirdRow){
-        div.style.background = "linear-gradient(#eca45c, #e85b69)"
+    else{
+        grid6[i].style.background = "linear-gradient(#eca45c, #e85b69)"
     }
 }
 
