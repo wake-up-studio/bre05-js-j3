@@ -32,28 +32,80 @@ function grid2()
     let secondGridEven = document.querySelectorAll(".grid:nth-child(2) div:nth-child(even)")
     
     secondGrid.style.backgroundColor = green
-    secondGridEven.style.backgroundColor = yellow
     
+    for(let div of secondGridEven){
+        div.style.backgroundColor = yellow
+    }
+
 }
 
 function grid3()
 {
-
+    let thirdGrid = document.querySelectorAll(".grid:nth-child(3) div")
+    
+    thirdGrid[0].style.backgroundColor = red
+    thirdGrid[1].style.backgroundColor = orange
+    thirdGrid[2].style.backgroundColor = yellow
+    thirdGrid[3].style.backgroundColor = green
+    thirdGrid[4].style.backgroundColor = blue
+    thirdGrid[5].style.backgroundColor = purple
 }
 
 function grid4()
 {
-
+    let fourthGrid = document.querySelector(".grid:nth-child(4)")
+    let center = document.querySelector(".grid:nth-child(4) div:nth-child(5)")
+    
+    fourthGrid.style.backgroundColor = black
+    center.style.backgroundColor = green
 }
 
 function grid5()
 {
-
+    let firstRow = document.querySelectorAll(".grid:nth-child(5) div:nth-child(-n+3)")
+    let secondRow = document.querySelectorAll(".grid:nth-child(5) div:nth-child(n+4):nth-child(-n+6)")
+    let thirdRow = document.querySelectorAll(".grid:nth-child(5) div:nth-child(n+7):nth-child(-n+9)")
+    
+    for(let div of firstRow){
+        div.style.backgroundColor = blue
+    }
+    
+    for(let i = 0; i<secondRow.length; i++){
+        if(i % 2 === 0){
+            secondRow[i].style.backgroundColor = red
+        }
+        else{
+            secondRow[i].style.backgroundColor = purple
+        }
+    }
+    
+    for(let x = 0; x<secondRow.length; x++){
+        if(x % 2 === 0){
+            thirdRow[x].style.backgroundColor = orange
+        }
+        else{
+            thirdRow[x].style.backgroundColor = yellow
+        }
+    }
 }
 
 function grid6()
 {
-
+    let firstRow = document.querySelectorAll(".grid:last-of-type div:nth-child(-n+3)")
+    let secondRow = document.querySelectorAll(".grid:last-of-type div:nth-child(n+4):nth-child(-n+6)")
+    let thirdRow = document.querySelectorAll(".grid:last-of-type div:nth-child(n+7):nth-child(-n+9)")
+    
+    for(let div of firstRow){
+        div.style.background = "linear-gradient(#956caf, #427cf5)"
+    }
+    
+    for(let div of secondRow){
+        div.style.background = "linear-gradient(#4cee7e, #efec4f)"
+    }
+    
+    for(let div of thirdRow){
+        div.style.background = "linear-gradient(#eca45c, #e85b69)"
+    }
 }
 
 grid1();
